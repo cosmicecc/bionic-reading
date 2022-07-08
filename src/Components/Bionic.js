@@ -6,8 +6,11 @@ import {
 
 
 function Bionic(props) {
-    const content = props.content;
+   
     const [bionicData, setBionicData] = useState();
+
+    useEffect(() => {
+        const content = props.content;
 
     const encodedParams = new URLSearchParams();
     encodedParams.append("content", content);
@@ -26,7 +29,6 @@ function Bionic(props) {
         data: encodedParams
     };
 
-    useEffect(() => {
         if (content) {
         function getBionicData() {
             axios.request(options).then(function (response) {
@@ -37,7 +39,7 @@ function Bionic(props) {
         }
         getBionicData();
     }
-    }, [content])
+    }, [props.content])
 
     function createMarkup() { return {__html: bionicData}; };
 
