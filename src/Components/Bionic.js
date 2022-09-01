@@ -12,24 +12,24 @@ function Bionic(props) {
     useEffect(() => {
         const content = props.content;
 
-    const encodedParams = new URLSearchParams();
-    encodedParams.append("content", content);
-    encodedParams.append("response_type", "html");
-    encodedParams.append("request_type", "html");
-    encodedParams.append("fixation", "1");
-    encodedParams.append("saccade", "10");
+        const encodedParams = new URLSearchParams();
+        encodedParams.append("content", content);
+        encodedParams.append("response_type", "html");
+        encodedParams.append("request_type", "html");
+        encodedParams.append("fixation", "1");
+        encodedParams.append("saccade", "10");
 
-    const options = {
-        method: 'POST',
-        url: 'https://bionic-reading1.p.rapidapi.com/convert',
-        headers: {
-          'content-type': 'application/x-www-form-urlencoded',
-          'X-RapidAPI-Key': 'a5b901e74amshbc89bc7d4cd02ffp19132ajsn30715bc58067',
-          'X-RapidAPI-Host': 'bionic-reading1.p.rapidapi.com'},
-        data: encodedParams
+        const options = {
+            method: 'POST',
+            url: 'https://bionic-reading1.p.rapidapi.com/convert',
+            headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'X-RapidAPI-Key': 'a5b901e74amshbc89bc7d4cd02ffp19132ajsn30715bc58067',
+            'X-RapidAPI-Host': 'bionic-reading1.p.rapidapi.com'},
+            data: encodedParams
     };
 
-        if (content) {
+    if (content) {
         function getBionicData() {
             axios.request(options).then(function (response) {
                 setBionicData(response.data);
