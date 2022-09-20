@@ -9,7 +9,6 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import Bionic from './Components/Bionic';
-import Colours from './Components/Colours';
 
 function App() {
   const [selection, setSelection] = useState();
@@ -46,7 +45,6 @@ function App() {
               dog, and enjoyed running through fields and hiding in holes. You can find a video of Yogi if you search on the BBC archive 
               site.
             </Box>
-           
           </VStack>
         </Grid>
       </Box>
