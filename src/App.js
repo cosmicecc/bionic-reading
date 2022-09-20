@@ -27,7 +27,6 @@ function App() {
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8} onMouseUp={handleMouseUp}>
             <Heading>Bionic reading</Heading>
-            <Colours />
             <Bionic content={selection ? selection : null}/>
             <Box>
               To see bionic reading in action, highlight a section of text on this page. It will automatically transform.
