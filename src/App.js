@@ -9,7 +9,8 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import Bionic from './Components/Bionic';
-import Colours from './Components/Colours';
+// import Colours from './Components/Colours';
+import Text from './Components/Text/Text';
 
 function App() {
   const [selection, setSelection] = useState();
@@ -28,7 +29,8 @@ function App() {
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8} onMouseUp={handleMouseUp}>
             <Heading>Dummy content</Heading>
-            <Colours />
+            <Text/>
+            {/* <Colours /> */}
             <Bionic content={selection ? selection : null}/>
             <Box>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel neque in lorem euismod bibendum. 
